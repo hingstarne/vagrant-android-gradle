@@ -6,6 +6,9 @@ Vagrant.configure('2') do |config|
   config.vm.provider :virtualbox do |virtualbox, override|
     override.vm.box     = 'debian-70rc1-x64-vbox4210.box'
     override.vm.box_url = 'http://puppet-vagrant-boxes.puppetlabs.com/debian-70rc1-x64-vbox4210.box'
+    virtualbox.customize ["modifyvm", :id, "--name", "tomcat6test"]
+    virtualbox.customize ["modifyvm", :id, "--memory", "512"]
+    virtualbox.customize ["modifyvm", :id, "--cpus", "2"]
   end
 
   # Forward standard ports (local only, does not run under AWS)

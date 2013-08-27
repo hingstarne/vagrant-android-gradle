@@ -32,14 +32,9 @@ node default {
  		include_src          => true;
 	}
 
-	# Install Java
-	class {'java':
-		distribution         => 'jre',
-		version              => 'present',
-		require              => Apt::Source['debian_wheezy'];
-	}
+	# Install Debian Packages
 	package { $packages:
-		ensure => installed,
+		ensure               => installed,
 	}
 
 	
