@@ -1,7 +1,7 @@
-vagrant-debian-tomcat
+vagrant-ruby-dev
 =====================
 
-Generic Vagrant Powered Development Enviroment for Apache Tomcat
+Generic Vagrant Powered Development Enviroment for Ruby
 
 General notes
 -------------
