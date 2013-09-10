@@ -44,7 +44,7 @@ node default {
 	shell                    => '/bin/bash',
 	managehome               => true,
 	}
-	ssh_authorized_keys {
+	ssh_authorized_key {
 	"arne@Macbook-root":
     ensure                   => present,
     user                     => root,
