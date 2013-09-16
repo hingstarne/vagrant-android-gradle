@@ -38,9 +38,8 @@ node default {
 	}
 	
 	# Setup JDK
-	$javapackages=['jre','jdk']
 	class { 'java':
-	distribution => $javapackages,
+	distribution => 'jre',
 	version      => 'latest',
     }
 
