@@ -1,7 +1,7 @@
 node default {
 	
 	# Packages to install
-	$packages = ['vim','git']
+	$packages = ['vim','git','openjdk-7-jre','openjdk-7-jdk']
 
 	# Cleanup APT Repositories for a nice clean start
 	class { 'apt':
@@ -36,12 +36,6 @@ node default {
 	package { $packages:
 		ensure               => installed;
 	}
-	
-	# Setup JDK
-	class { 'java':
-	distribution => 'jre',
-	version      => 'latest',
-    }
 
     # Setup Android User, workingdir and sdk
 	user{'android':
@@ -54,7 +48,7 @@ node default {
 	class { 'android':
     user                     => 'android',
     installdir               => '/opt/android',
-    require                  => [User['android'], Class['java']];
+    require                  => [User['android'], Package['openjdk-7-jdk']];
   }
 
 }
