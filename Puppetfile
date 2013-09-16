@@ -3,11 +3,13 @@
 mod 'r10k',
   :git => 'https://github.com/huit/puppet-r10k'
 mod 'android',
-  :git => 'https://github.com/maestrodev/puppet-android.git'
+  :git => 'https://github.com/hingstarne/puppet-android.git'
 mod 'wget',
   :git => 'https://github.com/maestrodev/puppet-wget.git'
 mod 'gradle',
   :git => 'https://github.com/hingstarne/puppet-gradle.git'
+mod 'java',
+  :git => 'https://github.com/puppetlabs/puppetlabs-java.git'
 
 # This is currently a noop but will be supported in the future.
 forge 'forge.puppetlabs.com'

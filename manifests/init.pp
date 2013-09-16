@@ -34,14 +34,20 @@ node default {
 
 	# Install Debian Packages
 	package { $packages:
-		ensure               => installed,
+		ensure               => installed;
 	}
-
+    # Setup Android User, workingdir and sdk
 	user{'android':
 	comment                  => 'android dev user',
 	ensure                   => 'present',
 	shell                    => '/bin/bash',
-	managehome               => true,
-	}
+	managehome               => true;
+    }
+
+	class { 'android':
+    user                     => 'android',
+    installdir               => '/opt/android',
+    require                  => User['android'];
+  }
 
 }
