@@ -45,10 +45,6 @@ node default {
 	managehome               => true;
     }
 
-	class { 'android':
-    user                     => 'android',
-    installdir               => '/opt/android',
-    require                  => [User['android'], Package['openjdk-7-jdk']];
+    class { 'android':
   }
-
 }
