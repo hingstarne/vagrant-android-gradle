@@ -36,6 +36,13 @@ node default {
 	package { $packages:
 		ensure               => installed;
 	}
+	
+	# Setup JDK
+	class { 'java':
+	distribution => 'jdk',
+	version      => 'latest',
+    }
+
     # Setup Android User, workingdir and sdk
 	user{'android':
 	comment                  => 'android dev user',
@@ -47,7 +54,7 @@ node default {
 	class { 'android':
     user                     => 'android',
     installdir               => '/opt/android',
-    require                  => User['android'];
+    require                  => [User['android'], Class['java']];
   }
 
 }
