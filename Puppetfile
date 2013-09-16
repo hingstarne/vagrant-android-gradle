@@ -2,9 +2,12 @@
 # Install r10k from tfhartmann's fork
 mod 'r10k',
   :git => 'https://github.com/huit/puppet-r10k'
-mod 'rbenv',
-  :git => 'https://github.com/alup/puppet-rbenv'
-
+mod 'android',
+  :git => 'https://github.com/maestrodev/puppet-android.git'
+mod 'wget',
+  :git => 'https://github.com/maestrodev/puppet-wget.git'
+mod 'gradle',
+  :git => 'https://github.com/hingstarne/puppet-gradle.git'
 
 # This is currently a noop but will be supported in the future.
 forge 'forge.puppetlabs.com'

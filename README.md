@@ -1,7 +1,8 @@
-vagrant-ruby-dev
+vagrant-android-gradle
 =====================
 
-Generic Vagrant Powered Development Enviroment for Ruby
+Generic Vagrant Powered Development Enviroment for Android
+This is a headless environment just for building not for development
 
 General notes
 -------------
@@ -15,4 +16,7 @@ Local install using VirtualBox
 * Install Vagrant
 * Checkout this repo
 * Run: `vagrant up --provider virtualbox`
+
+Based on the excellent work of the Harvard University
+https://github.com/huit/vagrant-generic
 
